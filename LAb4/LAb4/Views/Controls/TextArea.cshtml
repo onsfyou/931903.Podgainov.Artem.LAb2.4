@@ -1,0 +1,21 @@
+﻿@{
+	ViewData["Title"] = "Text Area";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Text Area</h1>
+	@if(ViewData["Text"] == null)
+	{
+		using (Html.BeginForm())
+		{
+			<p>Text<br />
+				@Html.TextArea("Text")
+			</p>
+			<input type="submit" value="Submit" />
+		}
+	}
+	else
+	{
+		<p><b>Text</b> @ViewData["Text"]</p>
+	}
+</div>

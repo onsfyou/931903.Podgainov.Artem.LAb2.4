@@ -1,0 +1,21 @@
+﻿@{
+	ViewData["Title"] = "Check Box";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Check Box</h1>
+	@if(ViewData["Text"] == null)
+	{
+		using (Html.BeginForm())
+		{
+			<p>Text<br />
+				@Html.CheckBox("IsSelected") IsSelected
+			</p>
+			<input type="submit" value="Submit" />
+		}
+	}
+	else
+	{
+		<p><b>IsSelected</b> @ViewData["Text"]</p>
+	}
+</div>

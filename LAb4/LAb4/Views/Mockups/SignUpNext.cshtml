@@ -1,0 +1,30 @@
+﻿@{
+	ViewData["Title"] = "Sign up";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Sign up</h1>
+	@using (Html.BeginForm())
+	{
+		<p>
+			<b>Email</b><br />
+			@Html.TextBox("Email")
+		</p>
+		<br />
+		<p>
+			<b>Password</b><br />
+			@Html.Password("Password")
+		</p>
+		<br />
+		<p>
+			<b>Confirm password</b><br />
+			@Html.Password("ConPassword")
+		</p>
+		<br />
+		<p>
+			@Html.CheckBox("IsRemember", "Remember") Remember? 
+		</p>
+		<br />
+		<input type="submit" value="Complete sign up" />
+	}
+</div>

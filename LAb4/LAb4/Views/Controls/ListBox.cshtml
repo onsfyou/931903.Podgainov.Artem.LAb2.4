@@ -1,0 +1,21 @@
+﻿@{
+	ViewData["Title"] = "List Box";
+}
+
+<div class="text-left">
+    <h1 class="display-4">List Box</h1>
+	@if(ViewData["Months"] == null)
+	{
+		using (Html.BeginForm())
+		{
+			<p><b>Months</b><br />
+				@Html.ListBox("Months", new MultiSelectList(new string[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}))
+			</p>
+			<input type="submit" value="Submit" />
+		}
+	}
+	else
+	{
+		<p><b>Months</b> @ViewData["Months"]</p>
+	}
+</div>

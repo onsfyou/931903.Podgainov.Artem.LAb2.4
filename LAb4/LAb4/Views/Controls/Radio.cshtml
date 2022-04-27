@@ -1,0 +1,32 @@
+﻿@{
+	ViewData["Title"] = "Radio";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Radio</h1>
+	@if(ViewData["Text"] == null)
+	{
+		using (Html.BeginForm())
+		{
+			<p><b>Month</b><br />
+				@Html.RadioButton("Text", "January") January <br>
+				@Html.RadioButton("Text", "February") February <br>
+				@Html.RadioButton("Text", "March") March <br>
+				@Html.RadioButton("Text", "April") April <br>
+				@Html.RadioButton("Text", "May") May <br>
+				@Html.RadioButton("Text", "June") June <br>
+				@Html.RadioButton("Text", "July") July <br>
+				@Html.RadioButton("Text", "August") August <br>
+				@Html.RadioButton("Text", "September") September <br>
+				@Html.RadioButton("Text", "October") October <br>
+				@Html.RadioButton("Text", "November") November <br>
+				@Html.RadioButton("Text", "December") December <br>
+			</p>
+			<input type="submit" value="Submit" />
+		}
+	}
+	else
+	{
+		<p><b>Month</b> @ViewData["Text"]</p>
+	}
+</div>
